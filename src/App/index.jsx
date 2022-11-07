@@ -1,19 +1,19 @@
 // import './App.css';
-import React from 'react';
+import { useState } from 'react';
 import { AppUI } from './AppUI';
-
-const defaultTodos = [
-  {text:'Cortar cebolla', completed:false},
-  {text:'Tormar el curso de intro a react', completed:false},
-  {text:'Llorar con la llorona', completed:false}
-];
+import { useLocalStorage } from '../hooks/useLocalStorage';
 
 
 function App() {
-/* Creating a state variable called todos and setting it to the defaultTodos array. It is also creating
-a state variable called searchValue and setting it to an empty string. */
-  const [todos, setTodos] = React.useState(defaultTodos);
-  const [searchValue, setSearchValue] = React.useState('');
+
+  
+  // STATES
+  
+  /* Using the useLocalStorage hook to set the todos state to the value of the local storage item
+  'TODOS_V1' and if that item does not exist, it sets the todos state to an empty array. */
+  const [todos, saveTodos] = useLocalStorage('TODOS_V1', []);
+
+  const [searchValue, setSearchValue] = useState('');
 
 
 
@@ -45,27 +45,29 @@ a state variable called searchValue and setting it to an empty string. */
   
   // ITEMS BEHAVIOUR
 
-/**
- * It takes in a text parameter, finds the index of the todo with that text, creates a new array of
- * todos, and then toggles the completed property of the todo at that index.
- * @param text - the text of the todo that was clicked
- */
+ 
+  /**
+   * If the todo is completed, set it to false, otherwise set it to true.
+   */
   const completeTodo = (text) => {
+    /* Finding the index of the todo with the matching text, creating a new array with all the todos
+    except the one with the matching text, and saving the new array to local storage. */
     const todoIndex = todos.findIndex(todo => todo.text === text);
     const newTodos = [...todos];
     newTodos[todoIndex].completed === true ? newTodos[todoIndex].completed = false: newTodos[todoIndex].completed = true;
-    setTodos(newTodos);
+    saveTodos(newTodos);
   }
-/**
- * The deleteTodo function takes a text argument, finds the index of the todo with the matching text,
- * creates a new array with the todos, removes the todo at the index, and sets the todos to the new
- * array.
- */
+
+  /**
+   * The deleteTodo function takes a text argument, finds the index of the todo with that text, creates
+   * a new array with all the todos except the one with the matching text, and saves the new array to
+   * local storage.
+   */
   const deleteTodo = (text) => {
     const todoIndex = todos.findIndex(todo => todo.text === text);
     const newTodos = [...todos];
     newTodos.splice(todoIndex, 1);
-    setTodos(newTodos);
+    saveTodos(newTodos);
   }
 
   
