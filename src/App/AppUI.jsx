@@ -1,19 +1,18 @@
 import { TodoCounter } from "../Components/TodoCounter";
-import { TodoSearch } from "../Components/TodoSearch";
-import { TodoList } from "../Components/TodoList";
-import { TodoItem } from "../Components/TodoItem";
-import { CreateTodoButton } from "../Components/CreateTodoButton";
+import { TodoSearch } from "../Components/TodoSearch/TodoSearch";
+import { TodoList } from "../Components/TodoList/TodoList";
+import { TodoItem } from "../Components/TodoItem/TodoItem";
+import { CreateTodoButton } from "../Components/CreateTodoButton/CreateTodoButton";
 
-function AppUI(props){
-    const {
-        totalTodos,
-        completedTodos,
-        searchValue,
-        setSearchValue,
-        searchedTodos,
-        completeTodo,
-        deleteTodo
-    } = props
+function AppUI({
+    totalTodos,
+    completedTodos,
+    searchValue,
+    setSearchValue,
+    searchedTodos,
+    completeTodo,
+    deleteTodo
+}){
     
     return(
         <>

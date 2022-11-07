@@ -1,7 +1,6 @@
 import './TodoList.css';
 
-function TodoList(props) {
-    const { children } = props;
+function TodoList({ children }) {
     return(
         <section>
             <ul>

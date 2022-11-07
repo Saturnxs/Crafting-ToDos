@@ -1,7 +1,6 @@
 import './TodoItem.css';
 
-function TodoItem(props){
-    const { text, completed, onComplete, onDelete } = props;
+function TodoItem({ text, completed, onComplete, onDelete }){
 
     return(
         <li className="TodoItem">

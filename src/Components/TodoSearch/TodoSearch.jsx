@@ -1,8 +1,6 @@
 import './TodoSearch.css';
 
-function TodoSearch(props) {
-
-    const { searchValue, setSearchValue } = props;
+function TodoSearch({ searchValue, setSearchValue }) {
 
     const onSearchValueChange = (event) => {
         console.log(event.target.value);
