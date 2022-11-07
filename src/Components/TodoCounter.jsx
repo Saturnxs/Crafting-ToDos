@@ -1,8 +1,10 @@
 import './TodoCounter.css';
 
-function TodoCounter() {
+function TodoCounter(props) {
+  const { totalTodos, completedTodos } = props;
+
   return (
-    <h2 className='TodoCounter'>Has completado 2 de 3 TODOs</h2>
+    <h2 className='TodoCounter'>Has completado {completedTodos} de {totalTodos} TODOs</h2>
   );
 }
 
