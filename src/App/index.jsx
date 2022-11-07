@@ -1,11 +1,6 @@
 // import './App.css';
 import React from 'react';
-import { TodoCounter } from "../Components/TodoCounter";
-import { TodoSearch } from "../Components/TodoSearch";
-import { TodoList } from "../Components/TodoList";
-import { TodoItem } from "../Components/TodoItem";
-import { CreateTodoButton } from "../Components/CreateTodoButton";
-
+import { AppUI } from './AppUI';
 
 const defaultTodos = [
   {text:'Cortar cebolla', completed:false},
@@ -15,8 +10,14 @@ const defaultTodos = [
 
 
 function App() {
+/* Creating a state variable called todos and setting it to the defaultTodos array. It is also creating
+a state variable called searchValue and setting it to an empty string. */
   const [todos, setTodos] = React.useState(defaultTodos);
   const [searchValue, setSearchValue] = React.useState('');
+
+
+
+  // SEARCH BEHAVIOUR
 
   let searchedTodos = [];
 
@@ -30,11 +31,19 @@ function App() {
       return todoText.includes(searchText);
     })
   }
-    
-  const completedTodos = todos.filter(todo => todo.completed).length;
-  const totalTodos = todos.length;
+
+  
+
+  // COUNTER BEHAVIOUR
+  
+  /* Filtering the todos array and returning the length of the array. */
+  const completedTodosNumber = todos.filter(todo => todo.completed).length;
+  /* Counting the number of todos in the todos array. */
+  const totalTodosNumber = todos.length;
 
 
+  
+  // ITEMS BEHAVIOUR
 
 /**
  * It takes in a text parameter, finds the index of the todo with that text, creates a new array of
@@ -47,8 +56,11 @@ function App() {
     newTodos[todoIndex].completed === true ? newTodos[todoIndex].completed = false: newTodos[todoIndex].completed = true;
     setTodos(newTodos);
   }
-
-
+/**
+ * The deleteTodo function takes a text argument, finds the index of the todo with the matching text,
+ * creates a new array with the todos, removes the todo at the index, and sets the todos to the new
+ * array.
+ */
   const deleteTodo = (text) => {
     const todoIndex = todos.findIndex(todo => todo.text === text);
     const newTodos = [...todos];
@@ -56,29 +68,19 @@ function App() {
     setTodos(newTodos);
   }
 
+  
+
+  /* Returning the AppUI component and passing in the props. */
   return (
-    <>
-      <TodoCounter
-        totalTodos={totalTodos}
-        completedTodos={completedTodos}
-      />    
-      <TodoSearch
-        searchValue={searchValue}
-        setSearchValue={setSearchValue}
-      />
-      <TodoList>
-        {searchedTodos.map(todo =>(
-          <TodoItem
-            key = {todo.text}
-            text = {todo.text}
-            completed = {todo.completed}
-            onComplete = {() => completeTodo(todo.text)}
-            onDelete = {()=> deleteTodo(todo.text)}
-          />
-        ))}
-      </TodoList>
-      <CreateTodoButton />
-   </>
+    <AppUI
+      totalTodos = {totalTodosNumber}
+      completedTodos = {completedTodosNumber}
+      searchValue = {searchValue}
+      setSearchValue = {setSearchValue}
+      searchedTodos = {searchedTodos}
+      completeTodo = {completeTodo}
+      deleteTodo = {deleteTodo}
+    />
   );
 }
 
