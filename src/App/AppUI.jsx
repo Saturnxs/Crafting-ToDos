@@ -1,13 +1,21 @@
 import { useContext } from "react";
+import { TodoContext } from "../TodoContext/TodoContext";
 import { TodoCounter } from "../Components/TodoCounter/TodoCounter";
 import { TodoSearch } from "../Components/TodoSearch/TodoSearch";
 import { TodoList } from "../Components/TodoList/TodoList";
 import { TodoItem } from "../Components/TodoItem/TodoItem";
 import { CreateTodoButton } from "../Components/CreateTodoButton/CreateTodoButton";
-import { TodoContext } from "../TodoContext/TodoContext";
+import { Modal } from "../Components/Modal/Modal";
 
 function AppUI(){
-    const { error, loading, searchedTodos, completeTodo, deleteTodo } = useContext(TodoContext);
+    const { 
+        error,
+        loading,
+        searchedTodos,
+        completeTodo,
+        deleteTodo,
+        openModal
+    } = useContext(TodoContext);
 
     return(
         <>
@@ -27,7 +35,14 @@ function AppUI(){
                         onDelete = {()=> deleteTodo(todo.text)}
                     />
                     ))}
-            </TodoList>     
+            </TodoList>
+
+            {openModal && (
+                <Modal>
+                    <p>TP</p>
+                </Modal>
+            )}
+
             <CreateTodoButton />
         </>
     );
