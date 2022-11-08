@@ -11,7 +11,12 @@ function App() {
   
   /* Using the useLocalStorage hook to set the todos state to the value of the local storage item
   'TODOS_V1' and if that item does not exist, it sets the todos state to an empty array. */
-  const [todos, saveTodos] = useLocalStorage('TODOS_V1', []);
+  const {
+    item: todos,
+    saveItem: saveTodos,
+    loading,
+    error
+  } = useLocalStorage('TODOS_V1', []);
 
   const [searchValue, setSearchValue] = useState('');
 
@@ -75,6 +80,8 @@ function App() {
   /* Returning the AppUI component and passing in the props. */
   return (
     <AppUI
+      loading={loading}
+      error={error}
       totalTodos = {totalTodosNumber}
       completedTodos = {completedTodosNumber}
       searchValue = {searchValue}
