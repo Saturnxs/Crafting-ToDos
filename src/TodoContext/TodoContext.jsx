@@ -66,6 +66,15 @@ function TodoProvider({ children }){
         saveTodos(newTodos);
     }
 
+    const createTodo = (text) => {
+        const newTodos = [...todos];
+        newTodos.push({
+            completed: false,
+            text: text
+        })
+        saveTodos(newTodos);
+    }
+
     // Modal
 
     const [ openModal, setOpenModal ] = useState(false);
@@ -81,6 +90,7 @@ function TodoProvider({ children }){
             searchedTodos,
             completeTodo,
             deleteTodo,
+            createTodo,
             openModal,
             setOpenModal
         }}>

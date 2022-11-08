@@ -6,6 +6,7 @@ import { TodoList } from "../Components/TodoList/TodoList";
 import { TodoItem } from "../Components/TodoItem/TodoItem";
 import { CreateTodoButton } from "../Components/CreateTodoButton/CreateTodoButton";
 import { Modal } from "../Components/Modal/Modal";
+import { TodoForm } from "../Components/TodoForm/TodoForm";
 
 function AppUI(){
     const { 
@@ -39,7 +40,7 @@ function AppUI(){
 
             {openModal && (
                 <Modal>
-                    <p>TP</p>
+                    <TodoForm />
                 </Modal>
             )}
 
