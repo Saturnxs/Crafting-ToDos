@@ -1,34 +1,44 @@
 form {
   width: 90%;
-  max-width: 300px;
-  background-color: #fff;
+  max-width: 500px;
+  background-color: var(--wonders-magic);
   padding: 33px 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  border-radius: 12px;
 }
 
 label {
   text-align: center;
   font-weight: bold;
   font-size: 20px;
-  color: #1E1E1F;
+  color: var(--white);
   margin-bottom: 26px;
 }
 
+.icon-form{
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(112deg) brightness(105%) contrast(101%);
+  background-image: url('../../static/icons/jupiter.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 40px;
+  margin-bottom: 20px;
+}
+
 textarea {
-  background-color: #F9FBFC;
-  border: 2px solid #202329;
-  border-radius: 2px;
-  box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.25);
-  color: #1E1E1F;
-  font-size: 20px;
-  text-align: center;
-  padding: 12px;
-  height: 96px;
-  width: calc(100% - 25px);
   resize: none;
+  border-radius: 5px;
+  border: none;
+  background-color: #F9FBFC;
+  box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.25);
+  padding: 16px;
+  height: 50px;
+  width: calc(100% - 29px);
+  color: var(--deep-space);
+  font-family: var(--main-font);
+  font-size: 20px;
 }
 
 textarea::placeholder {
@@ -38,11 +48,11 @@ textarea::placeholder {
 }
 
 textarea:focus {
-  outline-color: #61DAFA;
+  outline: none;
 }
 
 .TodoForm-buttonContainer {
-  margin-top: 14px;
+  margin-top: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -53,8 +63,8 @@ textarea:focus {
   cursor: pointer;
   display: inline-block;
   font-size: 20px;
-  color: #202329;
-  font-weight: 400;
+  color: var(--white);
+  font-weight: 700;
   width: 120px;
   height: 48px;
   border-radius: 2px;
@@ -63,10 +73,21 @@ textarea:focus {
 }
 
 .TodoForm-button--add {
-  background: #61DAFA;
-  box-shadow: 0px 5px 25px rgba(97, 218, 250, 0.5);
+  transition: box-shadow 250ms ease-out;
+  background: var(--pink-diamond);
+  box-shadow: 0px 5px 25px rgba(230, 115, 252, 0.5);
+}
+
+.TodoForm-button--add:hover {
+  box-shadow: 0px 5px 25px rgb(229, 115, 252);
 }
 
 .TodoForm-button--cancel {
+  transition: border 200ms ease-out;
   background: transparent;
+  border: transparent;
+}
+
+.TodoForm-button--cancel:hover {
+  border: 2px var(--white) solid;
 }

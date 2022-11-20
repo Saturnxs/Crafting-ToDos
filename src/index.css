@@ -7,11 +7,15 @@ body {
 
 #root{
   min-height: 100vh;
+}
+#root, #modal{  
+  --main-font: 'Montserrat';
   --white: #FFFFFF;
   --white-disabled: #cccccc;
   --kings-dragon: #2F2763;
   --pink-diamond: #E673FC;
-  --main-font: 'Montserrat';
+  --wonders-magic: #422486;
+  --deep-space: #292544;
   --deep-space-svg: brightness(0)
                     saturate(100%)
                     invert(13%)

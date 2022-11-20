@@ -24,9 +24,10 @@ function TodoForm(){
 
     return(
         <form onSubmit={onCreate}>
-            <label>Agrega un nuevo TODO</label>
+            <i className='icon-form'></i>
+            <label>Agrega una nueva tarea</label>
             <textarea 
-                placeholder='Hacer algo increible luego de dormir...'
+                placeholder='Hacer algo increible después de la siesta...'
                 value={newTodoText}
                 onChange={onWrite}
             ></textarea>

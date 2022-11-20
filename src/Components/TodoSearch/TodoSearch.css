@@ -10,7 +10,7 @@
   justify-content: flex-start;
   align-items: center;
   background: var(--kings-dragon);
-  width: 35%;
+  min-width: 600px;
   border-radius: 12px;
   height: 48px;
   padding: 0 24px;
