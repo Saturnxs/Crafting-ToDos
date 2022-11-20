@@ -7,7 +7,7 @@ function TodoCounter() {
   const { totalTodosNumber, completedTodosNumber } = useContext(TodoContext)
 
   return (
-    <h2 className='TodoCounter'>Has completado { completedTodosNumber } de { totalTodosNumber } TODOs</h2>
+    <h2 className='TodoCounter'>Has completado { completedTodosNumber } de { totalTodosNumber } tareas</h2>
   );
 }
 

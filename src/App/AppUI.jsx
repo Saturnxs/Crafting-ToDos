@@ -7,6 +7,7 @@ import { TodoItem } from "../Components/TodoItem/TodoItem";
 import { CreateTodoButton } from "../Components/CreateTodoButton/CreateTodoButton";
 import { Modal } from "../Components/Modal/Modal";
 import { TodoForm } from "../Components/TodoForm/TodoForm";
+import TopBannner from "../Components/TopBanner/TopBanner";
 
 function AppUI(){
     const { 
@@ -20,6 +21,7 @@ function AppUI(){
 
     return(
         <>
+            <TopBannner />
             <TodoCounter />    
             <TodoSearch />
             <TodoList>
