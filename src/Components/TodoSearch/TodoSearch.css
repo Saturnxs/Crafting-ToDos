@@ -2,13 +2,14 @@
   display: flex;
   justify-content: center;
   width: 100%;
+  padding-bottom: 24px;
 }
 
 .SearchBarInputGroup{
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background: #2F2763;
+  background: var(--kings-dragon);
   width: 35%;
   border-radius: 12px;
   height: 48px;
@@ -28,14 +29,14 @@
    background-color: transparent;
    border: none;
    font-size: 20px;
-   font-family: 'Montserrat';
+   font-family: var(--main-font);
    color: var(--white);
    width: 100%;
 }
   
   .TodoSearch::placeholder {
-    color: #fdfdfd;
-    font-family: 'Montserrat';
+    color: var(--white-disabled);
+    font-family: var(--main-font);
     font-weight: 400;
   }
   

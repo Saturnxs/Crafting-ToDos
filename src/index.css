@@ -9,7 +9,8 @@ body {
   min-height: 100vh;
   --white: #FFFFFF;
   --white-disabled: #cccccc;
-  --sm: 14px;
+  --kings-dragon: #2F2763;
+  --main-font: 'Montserrat';
   --deep-space-svg: brightness(0)
                     saturate(100%)
                     invert(13%)
