@@ -41,13 +41,12 @@
     filter: var(--deep-space-svg);
 }
 
-.Icon-check--todo{
-    background-image: url('../../static/icons/uncheked.svg');
+.Icon-check:hover{
+    background-image: url('../../static/icons/filled.svg');
 }
 
-.Icon-check--todo:hover,
-.Icon-check--complete:hover{
-    background-image: url('../../static/icons/filled.svg');
+.Icon-check--todo{
+  background-image: url('../../static/icons/uncheked.svg');
 }
 
 .Icon-check--complete{
