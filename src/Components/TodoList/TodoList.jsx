@@ -3,9 +3,9 @@ import './TodoList.css';
 function TodoList({ children }) {
     return(
         <section>
-            <ul>
+            <div className='listItems'>
                 {children}
-            </ul>
+            </div>
         </section>
     )
 }

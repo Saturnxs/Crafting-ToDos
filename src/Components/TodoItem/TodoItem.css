@@ -1,49 +1,65 @@
 .TodoItem {
-    background-color: #FAFAFA;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 24px;
-    box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.15);
-  }
+  min-width: 600px;
+  min-height: 80px;
+  height: fit-content;
+  background-color: var(--white);
+  margin-top: 24px;
+  box-shadow: 0px 5px 50px rgba(230, 115, 252, 0.15);
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.TodoItem--completed{
+  background-color: var(--white-disabled);
+}
+
   
-  .TodoItem-p {
-    margin: 24px 0 24px 24px;
-    width: calc(100% - 120px);
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: 400;
-  }
-  .TodoItem-p--complete {
-    text-decoration: line-through;
-  }
-  
-  .Icon {
+.TodoItem-p {
+  font-size: 18px;
+  font-weight: 550;
+  width: 400px;
+  overflow-wrap: break-word;
+}
+
+.TodoItem-p--complete {
+  text-decoration: line-through;
+}
+
+.Icon {
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 48px;
-    width: 48px;
-    font-size: 24px;
-    font-weight: bold;
-    /* background-color: #CCC; */
-  }
+    height: 24px;
+    width: 24px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: background-image 250ms ease-out;
+}
   
-  .Icon-check {
-    position: absolute;
-    left: 12px;
-  }
-  .Icon-check--active {
-    color: #4caf50;
-  }
+.Icon-check {
+    filter: var(--deep-space-svg);
+}
+
+.Icon-check--todo{
+    background-image: url('../../static/icons/uncheked.svg');
+}
+
+.Icon-check--todo:hover,
+.Icon-check--complete:hover{
+    background-image: url('../../static/icons/filled.svg');
+}
+
+.Icon-check--complete{
+    background-image: url('../../static/icons/checked.svg');
+}
   
-  .Icon-delete {
-    position: absolute;
-    top: -24px;
-    right: 0;
-  }
-  .Icon-delete:hover {
-    color: red;
-  }
+.Icon-delete {
+    filter: var(--red);
+    background-image: url('../../static/icons/empty-trash-can.svg');
+}
+
+.Icon-delete:hover,
+.Icon-delete--completed{
+    background-image: url('../../static/icons/filled-trash-can.svg');
+}

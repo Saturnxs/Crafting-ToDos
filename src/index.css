@@ -1,8 +1,29 @@
 body {
   margin: 0;
   font-family: 'Montserrat';
+  background: rgb(41,37,68);
+  background: linear-gradient(315deg, rgba(41,37,68,1) 0%, rgba(66,36,134,1) 26%, rgba(160,76,193,1) 100%);   
 }
 
 #root{
   min-height: 100vh;
+  --white: #FFFFFF;
+  --white-disabled: #cccccc;
+  --sm: 14px;
+  --deep-space-svg: brightness(0)
+                    saturate(100%)
+                    invert(13%)
+                    sepia(14%)
+                    saturate(2439%)
+                    hue-rotate(208deg)
+                    brightness(92%)
+                    contrast(90%);
+  --red:  brightness(0)
+          saturate(100%)
+          invert(54%)
+          sepia(8%)
+          saturate(3586%)
+          hue-rotate(306deg)
+          brightness(94%)
+          contrast(101%);
 }
