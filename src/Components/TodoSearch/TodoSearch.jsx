@@ -12,12 +12,17 @@ function TodoSearch() {
     }
 
     return (
-        <input
-            className='TodoSearch'
-            placeholder="Buscar"
-            value={searchValue}
-            onChange={onSearchValueChange}
-        />
+        <section className='SearchBarSection'>
+            <div className='SearchBarInputGroup'>
+                <i className="SearchBarIcon"></i>
+                <input
+                    className='TodoSearch'
+                    placeholder="Buscar"
+                    value={searchValue}
+                    onChange={onSearchValueChange}
+                />
+            </div>
+        </section>
     );
   }
   
