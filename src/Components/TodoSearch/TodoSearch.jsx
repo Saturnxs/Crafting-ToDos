@@ -16,7 +16,7 @@ function TodoSearch() {
                 <i className="SearchBarIcon"></i>
                 <input
                     className='TodoSearch'
-                    placeholder="Buscar"
+                    placeholder="Buscar tarea..."
                     value={searchValue}
                     onChange={onSearchValueChange}
                 />
