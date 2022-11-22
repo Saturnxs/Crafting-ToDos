@@ -7,8 +7,9 @@ import { TodoItem } from "../Components/TodoItem/TodoItem";
 import { CreateTodoButton } from "../Components/CreateTodoButton/CreateTodoButton";
 import { Modal } from "../Components/Modal/Modal";
 import { TodoForm } from "../Components/TodoForm/TodoForm";
-import TopBannner from "../Components/TopBanner/TopBanner";
+import { TopBannner } from "../Components/TopBanner/TopBanner"
 import { Loader } from "../Components/Loader/Loader";
+import { TodoPlaceholder } from "../Components/TodoPlaceholder/TodoPlaceholder";
 
 function AppUI(){
     const { 
@@ -28,7 +29,7 @@ function AppUI(){
             <TodoList>
                 {error && <p>Ha ocurrido un error...</p>}
                 {loading && <Loader/>}
-                {(!loading && !searchedTodos.length) && <p>¡Crea tu primer TODO!</p>}
+                {(!loading && !searchedTodos.length) && <TodoPlaceholder/>}
 
                 {searchedTodos.map(todo =>(
                     <TodoItem
@@ -47,7 +48,7 @@ function AppUI(){
                 </Modal>
             )}
 
-            <CreateTodoButton />
+            {(searchedTodos.length) && <CreateTodoButton />}
         </>
     );
 }

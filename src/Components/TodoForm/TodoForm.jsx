@@ -45,7 +45,7 @@ function TodoForm(){
                 <button
                     className={`TodoForm-button ${newTodoText.length === 0 ? 'TodoForm-button--invalid' : 'TodoForm-button--add'}`}
                     type='submit'
-                    disabled={newTodoText.length === 0 || newTodoText.length === 70}
+                    disabled={newTodoText.length === 0}
                 >Crear
                 </button>
             </div>

@@ -1,0 +1,17 @@
+.todo-placeholder{
+    color: var(--white);
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.todo-placeholder .CreateTodoButton{
+    position: relative;
+    bottom: auto;
+    right: auto;
+    z-index: 0;
+}

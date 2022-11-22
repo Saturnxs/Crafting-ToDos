@@ -19,8 +19,8 @@ label {
 }
 
 .icon-form{
-  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(112deg) brightness(105%) contrast(101%);
-  background-image: url('../../static/icons/jupiter.svg');
+  filter: var(--white-svg);
+  background-image: url('../../static/icons/checked.svg');
   background-repeat: no-repeat;
   background-size: contain;
   padding: 40px;

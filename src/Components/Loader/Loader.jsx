@@ -1,6 +1,6 @@
 import './Loader.css'
 
-function Loader({ children }) {
+function Loader() {
     return <div className="loader"></div>
 }
 

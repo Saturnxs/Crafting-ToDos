@@ -8,4 +8,4 @@ function TopBannner() {
     ) 
 }
 
-export default TopBannner;
+export { TopBannner };
