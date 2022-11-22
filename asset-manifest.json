@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/crafting-todos/static/css/main.11a5accc.css",
-    "main.js": "/crafting-todos/static/js/main.6689a732.js",
-    "static/media/planet_300px.gif": "/crafting-todos/static/media/planet_300px.12acc184734291b87b95.gif",
-    "static/media/filled-trash-can.svg": "/crafting-todos/static/media/filled-trash-can.0f9d8b47298acc76dbe5.svg",
-    "static/media/empty-trash-can.svg": "/crafting-todos/static/media/empty-trash-can.59004711ee6b1c8ea9b6.svg",
-    "index.html": "/crafting-todos/index.html",
-    "static/media/checked.svg": "/crafting-todos/static/media/checked.c675d5eeecc019c03ba4.svg",
-    "static/media/filled.svg": "/crafting-todos/static/media/filled.6e45544b3ebf25a59f71.svg",
-    "static/media/search-icon.svg": "/crafting-todos/static/media/search-icon.f93efc3e928d08fed1a3.svg",
-    "static/media/uncheked.svg": "/crafting-todos/static/media/uncheked.e9aee4dcc36f386d179e.svg",
-    "main.11a5accc.css.map": "/crafting-todos/static/css/main.11a5accc.css.map",
-    "main.6689a732.js.map": "/crafting-todos/static/js/main.6689a732.js.map"
+    "main.css": "/Crafting-ToDos/static/css/main.8360d2f4.css",
+    "main.js": "/Crafting-ToDos/static/js/main.6689a732.js",
+    "static/media/planet_300px.gif": "/Crafting-ToDos/static/media/planet_300px.12acc184734291b87b95.gif",
+    "static/media/filled-trash-can.svg": "/Crafting-ToDos/static/media/filled-trash-can.0f9d8b47298acc76dbe5.svg",
+    "static/media/empty-trash-can.svg": "/Crafting-ToDos/static/media/empty-trash-can.59004711ee6b1c8ea9b6.svg",
+    "index.html": "/Crafting-ToDos/index.html",
+    "static/media/checked.svg": "/Crafting-ToDos/static/media/checked.c675d5eeecc019c03ba4.svg",
+    "static/media/filled.svg": "/Crafting-ToDos/static/media/filled.6e45544b3ebf25a59f71.svg",
+    "static/media/search-icon.svg": "/Crafting-ToDos/static/media/search-icon.f93efc3e928d08fed1a3.svg",
+    "static/media/uncheked.svg": "/Crafting-ToDos/static/media/uncheked.e9aee4dcc36f386d179e.svg",
+    "main.8360d2f4.css.map": "/Crafting-ToDos/static/css/main.8360d2f4.css.map",
+    "main.6689a732.js.map": "/Crafting-ToDos/static/js/main.6689a732.js.map"
   },
   "entrypoints": [
-    "static/css/main.11a5accc.css",
+    "static/css/main.8360d2f4.css",
     "static/js/main.6689a732.js"
   ]
 }
