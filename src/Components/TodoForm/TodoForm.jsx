@@ -34,7 +34,7 @@ function TodoForm(){
                 value={newTodoText}
                 onChange={onWrite}
             ></textarea>
-            <label>{newTodoText.length}</label>
+            <label className='counter-lenght'>{newTodoText.length}/70</label>
             <div className='TodoForm-buttonContainer'>
                 <button
                     type='button'
@@ -43,7 +43,7 @@ function TodoForm(){
                 >Cancelar
                 </button>
                 <button
-                    className={`TodoForm-button ${newTodoText.length === 0 || newTodoText.length === 70 ? 'TodoForm-button--invalid' : 'TodoForm-button--add'}`}
+                    className={`TodoForm-button ${newTodoText.length === 0 ? 'TodoForm-button--invalid' : 'TodoForm-button--add'}`}
                     type='submit'
                     disabled={newTodoText.length === 0 || newTodoText.length === 70}
                 >Crear
