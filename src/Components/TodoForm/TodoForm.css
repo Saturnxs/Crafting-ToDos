@@ -74,12 +74,18 @@ textarea:focus {
 
 .TodoForm-button--add {
   transition: box-shadow 250ms ease-out;
+  transition: background 200ms ease-out;
   background: var(--pink-diamond);
   box-shadow: 0px 5px 25px rgba(230, 115, 252, 0.5);
 }
 
 .TodoForm-button--add:hover {
   box-shadow: 0px 5px 25px rgb(229, 115, 252);
+}
+
+.TodoForm-button--invalid{
+  background: var(--saturns-rings);
+  cursor: default;
 }
 
 .TodoForm-button--cancel {

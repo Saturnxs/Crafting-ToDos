@@ -6,7 +6,8 @@ function TodoForm(){
 
     const { setOpenModal, createTodo } = useContext(TodoContext);
 
-    const [ newTodoText, setNewTodoText ] = useState('')
+    const [ newTodoText, setNewTodoText ] = useState('');
+    
 
     const onCancel = () => {
         setOpenModal(false);
@@ -19,9 +20,11 @@ function TodoForm(){
     }
 
     const onWrite = (event) => {
-        setNewTodoText(event.target.value);
+        if (newTodoText.length < 70 || newTodoText.length > event.target.value.length){
+            setNewTodoText(event.target.value);
+        } 
     }
-
+    
     return(
         <form onSubmit={onCreate}>
             <i className='icon-form'></i>
@@ -31,6 +34,7 @@ function TodoForm(){
                 value={newTodoText}
                 onChange={onWrite}
             ></textarea>
+            <label>{newTodoText.length}</label>
             <div className='TodoForm-buttonContainer'>
                 <button
                     type='button'
@@ -39,8 +43,9 @@ function TodoForm(){
                 >Cancelar
                 </button>
                 <button
-                    className='TodoForm-button TodoForm-button--add'
+                    className={`TodoForm-button ${newTodoText.length === 0 || newTodoText.length === 70 ? 'TodoForm-button--invalid' : 'TodoForm-button--add'}`}
                     type='submit'
+                    disabled={newTodoText.length === 0 || newTodoText.length === 70}
                 >Crear
                 </button>
             </div>
