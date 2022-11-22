@@ -1,0 +1,7 @@
+.loader{
+    filter: var(--white-svg);
+    padding: 60px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('../../static/gifs/planet_300px.gif');
+}

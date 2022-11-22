@@ -8,6 +8,7 @@ import { CreateTodoButton } from "../Components/CreateTodoButton/CreateTodoButto
 import { Modal } from "../Components/Modal/Modal";
 import { TodoForm } from "../Components/TodoForm/TodoForm";
 import TopBannner from "../Components/TopBanner/TopBanner";
+import { Loader } from "../Components/Loader/Loader";
 
 function AppUI(){
     const { 
@@ -26,7 +27,7 @@ function AppUI(){
             <TodoSearch />
             <TodoList>
                 {error && <p>Ha ocurrido un error...</p>}
-                {loading && <p>Cargando...</p>}
+                {loading && <Loader/>}
                 {(!loading && !searchedTodos.length) && <p>¡Crea tu primer TODO!</p>}
 
                 {searchedTodos.map(todo =>(

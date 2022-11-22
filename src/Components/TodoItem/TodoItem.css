@@ -58,7 +58,7 @@
 }
   
 .Icon-delete {
-    filter: var(--red);
+    filter: var(--red-svg);
     background-image: url('../../static/icons/empty-trash-can.svg');
 }
 
