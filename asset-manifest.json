@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Crafting-ToDos/static/css/main.8360d2f4.css",
+    "main.css": "/Crafting-ToDos/static/css/main.964cb773.css",
     "main.js": "/Crafting-ToDos/static/js/main.6689a732.js",
     "static/media/planet_300px.gif": "/Crafting-ToDos/static/media/planet_300px.12acc184734291b87b95.gif",
     "static/media/filled-trash-can.svg": "/Crafting-ToDos/static/media/filled-trash-can.0f9d8b47298acc76dbe5.svg",
@@ -10,11 +10,11 @@
     "static/media/filled.svg": "/Crafting-ToDos/static/media/filled.6e45544b3ebf25a59f71.svg",
     "static/media/search-icon.svg": "/Crafting-ToDos/static/media/search-icon.f93efc3e928d08fed1a3.svg",
     "static/media/uncheked.svg": "/Crafting-ToDos/static/media/uncheked.e9aee4dcc36f386d179e.svg",
-    "main.8360d2f4.css.map": "/Crafting-ToDos/static/css/main.8360d2f4.css.map",
+    "main.964cb773.css.map": "/Crafting-ToDos/static/css/main.964cb773.css.map",
     "main.6689a732.js.map": "/Crafting-ToDos/static/js/main.6689a732.js.map"
   },
   "entrypoints": [
-    "static/css/main.8360d2f4.css",
+    "static/css/main.964cb773.css",
     "static/js/main.6689a732.js"
   ]
 }
